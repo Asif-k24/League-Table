@@ -1,7 +1,5 @@
 import CalculateLeagueTable from "./CalculateLeagueTable";
-import { League } from "./CalculateLeagueTable";
 
-// Only this suite (and others marked with only) are run
 describe('football table render', () => {
     it('should return correct process table data', () => {
         const data = {
