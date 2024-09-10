@@ -1,0 +1,190 @@
+.font-type {
+    font-family: system-ui;
+    font-size: small;
+    font-weight: normal;
+    color: rgb(61, 61, 61);
+}
+
+.container {
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+.container table {
+    width: 95%;
+    height: 50rem;
+    border-collapse: collapse;
+}
+
+@media(min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media(min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media(min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media(min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media(min-width:1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.align-items {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.table-margin {
+    margin: 1rem;
+    border-style: none;
+}
+
+thead {
+    border-style: none;
+    background: #f5f5f5;
+    color: rgb(107, 107, 107);
+    top: 0;
+    position: sticky;
+    z-index: 0;
+}
+
+th {
+    padding: 5px;
+    font-size: smaller;
+    font-weight: normal;
+}
+
+.th-club {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.bordered-bottom-row-lightgrey {
+    border-bottom: 1px solid rgb(241, 241, 241);
+}
+
+.bordered-bottom-row-darkgrey {
+    border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    gap: 5px;
+    justify-content: center;
+}
+
+.result div {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-small;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.win {
+    background-color: #3bd100;
+    color: #fff
+}
+
+.draw {
+    background-color: #828282;
+    color: #fff
+}
+
+.loss {
+    background-color: rgb(223, 0, 0);
+    color: #fff
+}
+
+.button-style {
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+}
+
+.button-style div:hover {
+    color: rgb(43, 81, 147);
+    text-shadow: 2px 2px 5px rgb(127, 127, 127);
+}
+
+.back-link {
+    /* float: right; */
+    background-color: rgb(0, 166, 255);
+    text-decoration: none;
+    border-radius: 10%;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    color: white;
+    width: 10rem;
+    height: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+}
+
+.backLink {
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    text-decoration: 'none';
+}
+
+table.table-details {
+    /* border: 1px solid #3bd100; */
+    width: 80%;
+    height: 30rem;
+    margin: 0 auto;
+    /* max-width: max-content; */
+}
+
+/* For WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners for the scrollbar thumb */
+}
