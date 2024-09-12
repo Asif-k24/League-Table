@@ -104,7 +104,7 @@ export default function FootballTable() {
                       <td className='text-center'>{index + 1}</td>
                       <td className='align-items'>
                         {
-                          ClubLogo.logo[team.club] ? (
+                          ClubLogo.logo[team.club as keyof typeof ClubLogo.logo] ? (
                             <img
                               style=
                               {{
@@ -112,7 +112,7 @@ export default function FootballTable() {
                                 borderRadius: "50%",
                                 marginRight: "8px"
                               }}
-                              src={'/' + ClubLogo.logo[team.club]}
+                              src={'/' + ClubLogo.logo[team.club as keyof typeof ClubLogo.logo]}
                               alt="" />
                           ) : ('No Logo')
                         }
@@ -133,7 +133,7 @@ export default function FootballTable() {
                       <td className='text-center'>{team.points}</td>
                       <td className="text-center">
                         <div className='result'>
-                          {team.form.map((result, idx) => (
+                          {team.form.map((result: string, idx: number) => (
                             <div className={result === 'W' ? "win" : result === 'L' ? 'loss' : 'draw'} key={idx}>{result}</div>
                           ))}
                         </div>
