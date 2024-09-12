@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../redux/slice/dataSlice';
 import { AppDispatch } from '../redux/store';
@@ -6,6 +6,11 @@ import { ModalComponent } from '../components/Modal/Modal';
 import ClubLogo from "../assets/data.json";
 import '../App.css';
 import '../components/Modal/Modal.css';
+import React from 'react';
+
+interface ClubLogo {
+  key: string
+}
 
 interface TeamDetails {
   club: string;
@@ -42,8 +47,12 @@ export default function FootballTable() {
     dispatch(fetchData());
   }, [dispatch]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
   const handleRowClick = (team: any) => {
     setSelectedTeam(team);
