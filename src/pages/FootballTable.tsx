@@ -6,7 +6,6 @@ import { ModalComponent } from '../components/Modal/Modal';
 import ClubLogo from "../assets/data.json";
 import '../App.css';
 import '../components/Modal/Modal.css';
-import React from 'react';
 
 interface ClubLogo {
   key: string
