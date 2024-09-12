@@ -1,7 +1,6 @@
-import React from 'react'
 import Modal from 'react-modal';
 
-export const ModalComponent = ({ isOpen, onRequestClose, data }) => {
+export const ModalComponent = ({ isOpen, onRequestClose, data }: any) => {
     // console.log(data)
 
     return (
@@ -74,7 +73,7 @@ export const ModalComponent = ({ isOpen, onRequestClose, data }) => {
                             <td className='text-center'>-</td>
                             <td className='text-center'>
                                 <div className="result">
-                                    {data?.form.map((result, idx) => (
+                                    {data?.form.map((result: string, idx: number) => (
                                         <div className={result === 'W' ? "win" : result === 'L' ? 'loss' : 'draw'} key={idx}>{result}</div>
                                     ))}
                                 </div>
