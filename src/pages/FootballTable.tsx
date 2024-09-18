@@ -21,7 +21,7 @@ interface TeamDetails {
   ga: number;
   gd: number;
   points: number;
-  form: any;
+  form: string[];
 }
 
 interface RootState {
