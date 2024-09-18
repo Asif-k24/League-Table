@@ -5,7 +5,7 @@ import { League } from "../../components/CalculateLeagueTable"
 interface DataState {
     loading: boolean;
     data: League | null;
-    processedData: TeamDetails[]; // Adjust the type as needed based on CalculateLeagueTable's return type
+    processedData: TeamDetails[] | null; // Adjusting the type as needed based on CalculateLeagueTable's return type
     error: string | null;
 }
 
