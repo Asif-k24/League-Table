@@ -39,9 +39,9 @@ const CalculateLeagueTable = (data: League): TeamDetails[] => {
     // console.log(teams);
 
     // Iterate through each match to calculate points and games played
-    data?.matches?.forEach((match: any) => {
+    data?.matches?.forEach((match: Match) => {
 
-        const { team1, team2, score } = match;
+        const { team1, team2, score }: Match = match;
 
         if (!teams[team1]) {
             teams[team1] = {
@@ -80,7 +80,7 @@ const CalculateLeagueTable = (data: League): TeamDetails[] => {
             teams[team1].played += 1;   // increments the number of games played by team1
             teams[team2].played += 1;   // increments the number of games played by team2
 
-            const [score1, score2] = score.ft;
+            const [score1, score2]: number[] = score.ft;
 
             // Update GF and GA
             teams[team1].gf += score1;
@@ -121,17 +121,17 @@ const CalculateLeagueTable = (data: League): TeamDetails[] => {
         }
     });
 
-    Object.values(teams).forEach(team => {
+    Object.values(teams).forEach((team: TeamDetails) => {
         team.gd = team.gf - team.ga;
         team.form = team.form.slice(-5).reverse(); // Limit to last 5 games, most recent first
     });
 
     // Convert the teams object to an array and sort by points
-    const leagueTable = Object.values(teams).sort((a, b) => b.points - a.points);
+    const leagueTable = Object.values(teams).sort((a: TeamDetails, b: TeamDetails) => b.points - a.points);
     leagueTable.forEach((team, index) => {
         team.position = index + 1
     })
-    console.log(leagueTable);
+    // console.log(leagueTable);
 
     return leagueTable;
 };
