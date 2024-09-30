@@ -9,7 +9,7 @@ interface DataState {
     error: string | null;
 }
 
-export const fetchData = createAsyncThunk<League, void>('data/fetchData', async () => {
+export const fetchData = createAsyncThunk<League>('data/fetchData', async () => {
     const response = await fetch('https://raw.githubusercontent.com/openfootball/football.json/master/2020-21/en.1.json');
     const data: League = await response.json();
     // console.log({data})
