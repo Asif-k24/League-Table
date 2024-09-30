@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import CalculateLeagueTable, { TeamDetails } from "../../components/CalculateLeagueTable";
 import { League } from "../../components/CalculateLeagueTable"
 
@@ -32,7 +32,7 @@ const dataSlice = createSlice({
             .addCase(fetchData.pending, (state) => {
                 state.loading = true;
             })
-            .addCase(fetchData.fulfilled, (state, action: PayloadAction<League>) => {
+            .addCase(fetchData.fulfilled, (state, action) => {
                 state.loading = false;
                 state.data = action.payload;
                 //call function here
