@@ -16,16 +16,14 @@ export const fetchData = createAsyncThunk<League, void>('data/fetchData', async 
     return data;
 });
 
-const initialState: DataState = {
-    loading: false,
-    data: null,
-    processedData: [],
-    error: null,
-}
-
 const dataSlice = createSlice({
     name: 'data',
-    initialState,
+    initialState: <DataState>{
+        loading: false,
+        data: null,
+        processedData: [],
+        error: null,
+    },
     reducers: {
         // empty, can add addtional synchronous actions here if needed
     },
