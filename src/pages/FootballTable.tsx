@@ -36,8 +36,8 @@ export default function FootballTable() {
 
   const dispatch = useDispatch<AppDispatch>();
   const { loading, error, processedData } = useSelector((state: RootState) => state.data);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedTeam, setSelectedTeam] = useState<TeamDetails | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal initial state is closed as stated is false
+  const [selectedTeam, setSelectedTeam] = useState<TeamDetails | null>(null); // 
 
   const specificBorderRows = [1, 4, 5, 17]; // Indices of rows to have the specific border color
 
@@ -52,6 +52,8 @@ export default function FootballTable() {
   if (error) {
     return <p>Error: {error}</p>;
   }
+
+// Details to show in Modal from the row that is selected with it's details
 
   const handleRowClick = (team: TeamDetails) => {
     setSelectedTeam(team);
@@ -95,7 +97,7 @@ export default function FootballTable() {
                   // }
                   const isSpecificBorderRow = specificBorderRows.includes(index + 1)
                   const rowClass = isSpecificBorderRow ? "bordered-bottom-row-darkgrey" : "bordered-bottom-row-lightgrey"
-                  // console.log(team)
+                  console.log(team)
 
                   return (
 
