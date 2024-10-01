@@ -1,6 +1,13 @@
 import Modal from 'react-modal';
+import { TeamDetails } from '../CalculateLeagueTable';
 
-export const ModalComponent = ({ isOpen, onRequestClose, data }: any) => {
+interface ModalComponentType {
+    isOpen: boolean;
+    onRequestClose: () => void;
+    data: TeamDetails | null;
+}
+
+export const ModalComponent = ({ isOpen, onRequestClose, data }: ModalComponentType) => {
     // console.log(data)
 
     return (
