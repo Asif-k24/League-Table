@@ -37,7 +37,7 @@ export default function FootballTable() {
   const dispatch = useDispatch<AppDispatch>();
   const { loading, error, processedData } = useSelector((state: RootState) => state.data);
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal initial state is closed as stated is false
-  const [selectedTeam, setSelectedTeam] = useState<TeamDetails | null>(null); // 
+  const [selectedTeam, setSelectedTeam] = useState<TeamDetails | null>(null); //  // Mutator function for the ModalComponent used as props to display the details of the selected row after clicking.
 
   const specificBorderRows = [1, 4, 5, 17]; // Indices of rows to have the specific border color
 
