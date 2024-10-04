@@ -53,7 +53,7 @@ export default function FootballTable() {
     return <p>Error: {error}</p>;
   }
 
-// Details to show in Modal from the row that is selected with it's details
+  // Details to show in Modal from the row that is selected with it's details
 
   const handleRowClick = (team: TeamDetails) => {
     setSelectedTeam(team);
