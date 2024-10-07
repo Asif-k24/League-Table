@@ -4,8 +4,8 @@ import { fetchData } from '../redux/slice/dataSlice';
 import { AppDispatch } from '../redux/store';
 import { ModalComponent } from '../components/Modal/Modal';
 import ClubLogo from "../assets/data.json";
-import '../App.css';
 import '../components/Modal/Modal.css';
+import '../App.css';
 
 interface RootState {
   data: {
