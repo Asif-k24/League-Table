@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../redux/slice/dataSlice';
-import { AppDispatch } from '../redux/store';
 import { ModalComponent } from '../components/Modal/Modal';
+import { AppDispatch } from '../redux/store';
 import ClubLogo from "../assets/data.json";
 import '../components/Modal/Modal.css';
 import '../App.css';
@@ -10,8 +10,8 @@ import '../App.css';
 interface RootState {
   data: {
     loading: boolean;
-    error: string | null;
     processedData: TeamDetails[];
+    error: string | null;
   }
 }
 
@@ -31,7 +31,6 @@ interface TeamDetails {
   points: number;
   form: string[];
 }
-
 
 export default function FootballTable() {
 
