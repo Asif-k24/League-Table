@@ -1,18 +1,5 @@
-export interface League {
-    name: string,
-    matches: Match[]
-}
-
-export interface Match {
-    // Define the structure of the match data according to the API response
-    round: string;
-    date: string;
-    team1: string;
-    team2: string;
-    score?: {
-        ft: number[]
-    };
-}
+import { League } from "../redux/slice/dataSlice";
+import { Match } from "../redux/slice/dataSlice";
 
 export interface TeamDetails {
     club: string;
@@ -80,6 +67,7 @@ const CalculateLeagueTable = (data: League): TeamDetails[] => {
             teams[team1].played += 1;   // increments the number of games played by team1
             teams[team2].played += 1;   // increments the number of games played by team2
 
+            // Here the variable score1 is assigned to ft of team1 (1st number in the string) & variable score2 is assigned to team2 (2nd number in the string)
             const [score1, score2]: number[] = score.ft;
 
             // Update GF and GA
@@ -121,6 +109,7 @@ const CalculateLeagueTable = (data: League): TeamDetails[] => {
         }
     });
 
+    // Calculating the goal difference and form of each team
     Object.values(teams).forEach((team: TeamDetails) => {
         team.gd = team.gf - team.ga;
         team.form = team.form.slice(-5).reverse(); // Limit to last 5 games, most recent first
