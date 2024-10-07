@@ -7,6 +7,14 @@ import ClubLogo from "../assets/data.json";
 import '../App.css';
 import '../components/Modal/Modal.css';
 
+interface RootState {
+  data: {
+    loading: boolean;
+    error: string | null;
+    processedData: TeamDetails[];
+  }
+}
+
 interface ClubLogo {
   key: string
 }
@@ -24,13 +32,6 @@ interface TeamDetails {
   form: string[];
 }
 
-interface RootState {
-  data: {
-    loading: boolean;
-    error: string | null;
-    processedData: TeamDetails[];
-  }
-}
 
 export default function FootballTable() {
 
