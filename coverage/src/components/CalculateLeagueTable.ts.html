@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for CalculateLeagueTable.ts</title>
+    <title>Code coverage report for src/components/CalculateLeagueTable.ts</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="prettify.css" />
-    <link rel="stylesheet" href="base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> CalculateLeagueTable.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> CalculateLeagueTable.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>76/76</span>
+                <span class='fraction'>75/75</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>76/76</span>
+                <span class='fraction'>75/75</span>
             </div>
         
             
@@ -190,31 +190,7 @@
 <a name='L125'></a><a href='#L125'>125</a>
 <a name='L126'></a><a href='#L126'>126</a>
 <a name='L127'></a><a href='#L127'>127</a>
-<a name='L128'></a><a href='#L128'>128</a>
-<a name='L129'></a><a href='#L129'>129</a>
-<a name='L130'></a><a href='#L130'>130</a>
-<a name='L131'></a><a href='#L131'>131</a>
-<a name='L132'></a><a href='#L132'>132</a>
-<a name='L133'></a><a href='#L133'>133</a>
-<a name='L134'></a><a href='#L134'>134</a>
-<a name='L135'></a><a href='#L135'>135</a>
-<a name='L136'></a><a href='#L136'>136</a>
-<a name='L137'></a><a href='#L137'>137</a>
-<a name='L138'></a><a href='#L138'>138</a>
-<a name='L139'></a><a href='#L139'>139</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L128'></a><a href='#L128'>128</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -282,6 +258,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">79x</span>
 <span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">79x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -324,6 +301,7 @@
 <span class="cline-any cline-yes">79x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-yes">20x</span>
@@ -334,26 +312,13 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">export interface League {
-    name: string,
-    matches: Match[]
-}
-&nbsp;
-export interface Match {
-    // Define the structure of the match data according to the API response
-    round: string;
-    date: string;
-    team1: string;
-    team2: string;
-    score?: {
-        ft: number[]
-    };
-}
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { League } from "../redux/slice/dataSlice";
+import { Match } from "../redux/slice/dataSlice";
 &nbsp;
 export interface TeamDetails {
     club: string;
@@ -380,9 +345,9 @@ const CalculateLeagueTable = (data: League): TeamDetails[] =&gt; {
     // console.log(teams);
 &nbsp;
     // Iterate through each match to calculate points and games played
-    data?.matches?.forEach((match: any) =&gt; {
+    data?.matches?.forEach((match: Match) =&gt; {
 &nbsp;
-        const { team1, team2, score } = match;
+        const { team1, team2, score }: Match = match;
 &nbsp;
         if (!teams[team1]) {
             teams[team1] = {
@@ -421,7 +386,8 @@ const CalculateLeagueTable = (data: League): TeamDetails[] =&gt; {
             teams[team1].played += 1;   // increments the number of games played by team1
             teams[team2].played += 1;   // increments the number of games played by team2
 &nbsp;
-            const [score1, score2] = score.ft;
+            // Here the variable score1 is assigned to ft of team1 (1st number in the string) &amp; variable score2 is assigned to team2 (2nd number in the string)
+            const [score1, score2]: number[] = score.ft;
 &nbsp;
             // Update GF and GA
             teams[team1].gf += score1;
@@ -462,17 +428,18 @@ const CalculateLeagueTable = (data: League): TeamDetails[] =&gt; {
         }
     });
 &nbsp;
-    Object.values(teams).forEach(team =&gt; {
+    // Calculating the goal difference and form of each team
+    Object.values(teams).forEach((team: TeamDetails) =&gt; {
         team.gd = team.gf - team.ga;
         team.form = team.form.slice(-5).reverse(); // Limit to last 5 games, most recent first
     });
 &nbsp;
     // Convert the teams object to an array and sort by points
-    const leagueTable = Object.values(teams).sort((a, b) =&gt; b.points - a.points);
+    const leagueTable = Object.values(teams).sort((a: TeamDetails, b: TeamDetails) =&gt; b.points - a.points);
     leagueTable.forEach((team, index) =&gt; {
         team.position = index + 1
     })
-    console.log(leagueTable);
+    // console.log(leagueTable);
 &nbsp;
     return leagueTable;
 };
@@ -484,16 +451,16 @@ export default CalculateLeagueTable</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-09-12T05:21:19.518Z
+                at 2024-10-15T05:37:16.104Z
             </div>
-        <script src="prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="sorter.js"></script>
-        <script src="block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     
